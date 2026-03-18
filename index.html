@@ -6,7 +6,7 @@
     <title>Meu Currículo Interativo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Estilos Globais e Layout Principal */
+       
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -29,7 +29,7 @@
             background-color: #fff;
         }
 
-        /* Barra Lateral (Sidebar) */
+        
         .sidebar {
             width: 350px;
             background-color: #2c3e50;
@@ -97,7 +97,7 @@
             background-color: #3498db;
         }
 
-        /* Área do Conteúdo Principal */
+       
         .main-content {
             flex: 1;
             background-color: #fff;
@@ -127,7 +127,7 @@
             text-align: center;
         }
 
-        /* Layout de Cards unificado para todas as seções */
+        
         .card-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -163,7 +163,7 @@
             color: #333;
         }
 
-        /* CÓDIGO PARA RESPONSIVIDADE */
+        
         @media (max-width: 768px) {
             .curriculo-container {
                 flex-direction: column;
@@ -293,29 +293,29 @@
         const menuItems = document.querySelectorAll('.sidebar-menu a');
         const sections = document.querySelectorAll('.page-section');
 
-        // Abordagem definitiva: Detecta se é touch e escolhe o evento certo
+        
         const eventoPrincipal = ('ontouchend' in document.documentElement) ? 'touchend' : 'click';
 
         menuItems.forEach(item => {
             item.addEventListener(eventoPrincipal, function(event) {
-                // Previne o comportamento padrão do link
+               
                 event.preventDefault(); 
                 
-                // Pega o ID da seção alvo a partir do href do link
+               
                 const targetId = this.getAttribute('href');
 
-                // Esconde todas as seções
+               
                 sections.forEach(section => {
                     section.classList.remove('active');
                 });
 
-                // Mostra a seção correta
+               
                 const activeSection = document.querySelector(targetId);
                 if (activeSection) {
                     activeSection.classList.add('active');
                 }
 
-                // Atualiza o destaque no menu
+               
                 menuItems.forEach(link => {
                     link.classList.remove('active');
                 });
@@ -323,7 +323,7 @@
             });
         });
         
-        // Garante que a primeira seção seja exibida ao carregar
+       
         document.querySelector('#experience').classList.add('active');
     });
 </script>
