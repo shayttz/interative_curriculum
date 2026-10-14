@@ -68,17 +68,19 @@
 
         .sidebar p.location {
             color: #3498db;
-            font-size: 0.9em;
-            margin-top: 0;
-            margin-bottom: 20px;
+            font-size: 0.88em;
+            margin-top: 2px;
+            margin-bottom: 4px;
             font-weight: 500;
         }
 
         .social-links {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 15px;
+            margin-top: 15px;
             margin-bottom: 15px;
             width: 100%;
         }
@@ -90,18 +92,20 @@
             flex-direction: column;
             align-items: center;
             font-size: 0.85em;
+            flex: 1;
             transition: color 0.3s ease;
         }
 
         .social-links a i {
             font-size: 1.6em;
-            margin-bottom: 3px;
+            margin-bottom: 4px;
         }
 
         .social-links a span.url-text {
-            font-size: 0.75em;
+            font-size: 0.72em;
             color: #bdc3c7;
             word-break: break-all;
+            margin-top: 2px;
         }
 
         .social-links a:hover {
@@ -135,8 +139,16 @@
             color: #3498db;
             font-size: 0.8em;
             margin-top: 10px;
-            text-decoration: underline;
-            word-break: break-all;
+            text-decoration: none;
+        }
+
+        .qr-code-img {
+            display: none;
+            width: 85px;
+            height: 85px;
+            margin: 8px auto 0 auto;
+            border-radius: 6px;
+            border: 2px solid #fff;
         }
 
         .sidebar-menu {
@@ -299,9 +311,9 @@
                 height: 297mm;
                 margin: 0 !important;
                 padding: 0 !important;
-                overflow: hidden !important;
                 background-color: #fff !important;
                 -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
                 print-color-adjust: exact !important;
             }
 
@@ -315,68 +327,80 @@
                 flex-direction: row !important;
                 margin: 0 !important;
                 padding: 0 !important;
-                overflow: hidden !important;
             }
 
             .sidebar {
-                width: 65mm !important;
+                width: 62mm !important;
                 height: 297mm !important;
                 background-color: #2c3e50 !important;
                 color: #ecf0f1 !important;
-                padding: 12mm 4mm !important;
+                padding: 8mm 3mm !important;
                 box-sizing: border-box !important;
                 justify-content: flex-start !important;
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                box-shadow: inset 0 0 0 1000px #2c3e50 !important;
             }
 
             .profile-pic {
-                width: 80px !important;
-                height: 80px !important;
-                margin-bottom: 6px !important;
-                border-width: 3px !important;
+                width: 70px !important;
+                height: 70px !important;
+                margin-bottom: 4px !important;
+                border-width: 2px !important;
+                border-color: #3498db !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
             }
 
             .sidebar h1 {
-                font-size: 1.25em !important;
+                font-size: 1.2em !important;
                 margin: 2px 0 !important;
+                color: #fff !important;
             }
 
             .sidebar p.subtitle {
-                font-size: 0.7em !important;
+                font-size: 0.68em !important;
                 margin-bottom: 2px !important;
-                line-height: 1.2 !important;
+                line-height: 1.15 !important;
+                color: #bdc3c7 !important;
             }
 
             .sidebar p.location {
-                font-size: 0.68em !important;
-                margin-bottom: 10px !important;
+                font-size: 0.62em !important;
+                margin-bottom: 2px !important;
+                color: #3498db !important;
             }
 
             .social-links {
-                gap: 8px !important;
-                margin-bottom: 8px !important;
+                gap: 4px !important;
+                margin-top: 8px !important;
+                margin-bottom: 6px !important;
             }
 
             .social-links a {
-                font-size: 0.65em !important;
-            }
-
-            .social-links a i {
-                font-size: 1em !important;
-                margin-bottom: 1px !important;
-            }
-
-            .social-links a span.url-text {
                 font-size: 0.6em !important;
                 color: #ecf0f1 !important;
             }
 
+            .social-links a i {
+                font-size: 0.9em !important;
+                margin-bottom: 1px !important;
+            }
+
+            .social-links a span.url-text {
+                font-size: 0.55em !important;
+                color: #ecf0f1 !important;
+            }
+
             .contact-email {
-                margin-bottom: 10px !important;
+                margin-bottom: 6px !important;
             }
 
             .contact-email a {
-                font-size: 0.65em !important;
+                font-size: 0.6em !important;
                 gap: 3px !important;
+                color: #ecf0f1 !important;
             }
 
             .sidebar-menu {
@@ -385,16 +409,22 @@
 
             .print-link {
                 display: block !important;
-                font-size: 0.65em !important;
-                margin-top: 8px !important;
+                font-size: 0.6em !important;
+                margin-top: 6px !important;
+                line-height: 1.15 !important;
+            }
+
+            .qr-code-img {
+                display: block !important;
+                width: 75px !important;
+                height: 75px !important;
             }
 
             .main-content {
                 flex: 1 !important;
                 height: 297mm !important;
-                padding: 8mm 8mm 4mm 8mm !important;
+                padding: 6mm 6mm 4mm 6mm !important;
                 box-sizing: border-box !important;
-                overflow: hidden !important;
             }
 
             .page-section {
@@ -402,25 +432,28 @@
                 opacity: 1 !important;
                 transform: none !important;
                 animation: none !important;
-                padding-bottom: 5px !important;
+                padding-bottom: 4px !important;
                 margin-bottom: 0 !important;
-                page-break-inside: avoid !important;
             }
 
             .page-section h2 {
-                font-size: 0.9em !important;
+                font-size: 0.88em !important;
                 margin-bottom: 3px !important;
                 margin-top: 2px !important;
                 text-align: left !important;
                 border-bottom: 1.5px solid #3498db !important;
                 padding-bottom: 1px !important;
+                color: #3498db !important;
             }
 
             .summary-card {
-                padding: 5px 7px !important;
-                font-size: 0.65em !important;
+                padding: 4px 6px !important;
+                font-size: 0.66em !important;
                 line-height: 1.2 !important;
                 border-left-width: 3px !important;
+                background-color: #ecf0f1 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
             }
 
             .card-list {
@@ -430,15 +463,26 @@
             }
 
             .card-list li {
-                padding: 4px 6px !important;
-                font-size: 0.62em !important;
+                padding: 4px 5px !important;
+                font-size: 0.64em !important;
                 border-radius: 4px !important;
-                page-break-inside: avoid !important;
+                background-color: #ecf0f1 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            .card-list li ul li {
+                font-size: 1em !important; 
+                padding: 0 !important;
+                margin-bottom: 1px !important;
+                line-height: 1.15 !important;
+                background-color: transparent !important;
             }
 
             .card-list li h3 {
                 font-size: 0.82em !important;
-                margin-bottom: 2px !important;
+                margin-bottom: 1px !important;
+                color: #2c3e50 !important;
             }
 
             .card-list li .date {
@@ -447,23 +491,20 @@
             }
 
             .card-list li p {
-                font-size: 0.85em !important;
+                font-size: 0.95em !important;
                 margin: 1px 0 !important;
-                line-height: 1.1 !important;
+                line-height: 1.15 !important;
             }
 
             .card-list li ul {
                 padding-left: 10px !important;
-                margin: 2px 0 !important;
-            }
-
-            .card-list li ul li {
-                margin-bottom: 1px !important;
+                margin: 1px 0 !important;
             }
 
             .card-list li i.skill-icon {
                 font-size: 0.85em !important;
                 margin-right: 3px !important;
+                color: #3498db !important;
             }
         }
     </style>
@@ -477,6 +518,7 @@
             <h1>Guilherme Azevedo</h1>
             <p class="subtitle">Técnico de Informática<br>Suporte e Infraestrutura de TI</p>
             <p class="location"><i class="fas fa-map-marker-alt"></i> Volta Redonda - RJ</p>
+            <p class="location"><i class="fas fa-id-card"></i> CNH Categoria B</p>
         </div>
 
         <div class="social-links">
@@ -501,10 +543,10 @@
         </div>
 
         <div class="print-link">
-            <a href="https://shayttz.github.io/interative_curriculum/" target="_blank" style="color: #3498db; text-decoration: underline;">
-                Clique para ver a versão interativa:<br>
-                shayttz.github.io/interative_curriculum/
+            <a href="https://shayttz.github.io/interative_curriculum/" target="_blank" style="color: #3498db; text-decoration: none;">
+                Clique ou aponte a câmera para ver a versão interativa:
             </a>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://shayttz.github.io/interative_curriculum/" alt="QR Code Currículo Interativo" class="qr-code-img">
         </div>
 
         <div class="sidebar-menu">
@@ -612,7 +654,7 @@
             <ul class="card-list">
                 <li>
                     <h3>Sistemas de Informação</h3>
-                    <p class="date">Universidade Estácio de Sá | 2018 – 2024</p>
+                    <p class="date">Universidade Estácio de Sá | 2018 – Concluído em 2024</p>
                     <p>Bacharelado concluído com foco em arquitetura de sistemas, desenvolvimento de software, redes de computadores e gestão de banco de dados.</p>
                 </li>
                 <li>
