@@ -7,8 +7,6 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-
-        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -31,7 +29,6 @@
             background-color: #fff;
         }
 
-        
         .sidebar {
             width: 350px;
             background-color: #2c3e50;
@@ -69,7 +66,6 @@
             line-height: 1.4;
         }
 
-        
         .social-links {
             display: flex;
             justify-content: center;
@@ -96,7 +92,6 @@
             color: #3498db;
         }
 
-        
         .contact-email {
             margin-bottom: 25px;
         }
@@ -113,6 +108,14 @@
 
         .contact-email a:hover {
             color: #3498db;
+        }
+
+        .print-link {
+            display: none;
+            color: #3498db;
+            font-size: 0.85em;
+            margin-top: 15px;
+            text-decoration: underline;
         }
 
         .sidebar-menu {
@@ -139,7 +142,6 @@
             transform: translateX(4px);
         }
 
-        
         .main-content {
             flex: 1;
             background-color: #fff;
@@ -169,7 +171,6 @@
             text-align: center;
         }
 
-        
         .summary-card {
             background-color: #ecf0f1;
             padding: 25px;
@@ -181,7 +182,6 @@
             border-left: 5px solid #3498db;
         }
 
-        
         .card-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -250,7 +250,6 @@
             font-size: 1.2em;
         }
 
-        
         @media (max-width: 850px) {
             .curriculo-container {
                 flex-direction: column;
@@ -267,103 +266,173 @@
                 padding: 25px;
             }
         }
-        
+
         @media print {
-            body {
-                background-color: #fff;
-                color: #000;
-                display: block;
-                min-height: auto;
+            @page {
+                size: A4 portrait;
+                margin: 0;
+            }
+
+            html, body {
+                width: 210mm;
+                height: 297mm;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow: hidden !important;
+                background-color: #fff !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
             }
 
             .curriculo-container {
-                box-shadow: none;
-                width: 100%;
-                max-width: 100%;
-                border-radius: 0;
-                display: block; 
+                width: 210mm !important;
+                height: 297mm !important;
+                max-width: 100% !important;
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                display: flex !important;
+                flex-direction: row !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow: hidden !important;
             }
 
             .sidebar {
-                width: 100%;
-                background-color: transparent;
-                color: #000;
-                padding: 0 0 20px 0;
-                border-bottom: 2px solid #2c3e50;
-                text-align: left;
-                align-items: flex-start;
+                width: 65mm !important;
+                height: 297mm !important;
+                background-color: #2c3e50 !important;
+                color: #ecf0f1 !important;
+                padding: 15mm 4mm !important;
+                box-sizing: border-box !important;
+                justify-content: flex-start !important;
+            }
+
+            .profile-pic {
+                width: 85px !important;
+                height: 85px !important;
+                margin-bottom: 8px !important;
+                border-width: 3px !important;
             }
 
             .sidebar h1 {
-                color: #2c3e50;
-                font-size: 2em;
+                font-size: 1.3em !important;
+                margin: 4px 0 !important;
             }
 
             .sidebar p.subtitle {
-                color: #555;
+                font-size: 0.72em !important;
+                margin-bottom: 12px !important;
+                line-height: 1.2 !important;
             }
 
-            .profile-pic, 
-            .sidebar-menu, 
             .social-links {
-                display: none !important; 
+                gap: 10px !important;
+                margin-bottom: 8px !important;
             }
 
-            
+            .social-links a {
+                font-size: 0.68em !important;
+            }
+
+            .social-links a i {
+                font-size: 1.1em !important;
+                margin-bottom: 2px !important;
+            }
+
+            .contact-email {
+                margin-bottom: 12px !important;
+            }
+
             .contact-email a {
-                color: #000;
-                font-weight: bold;
+                font-size: 0.68em !important;
+                gap: 4px !important;
+            }
+
+            .sidebar-menu {
+                display: none !important;
+            }
+
+            .print-link {
+                display: block !important;
+                font-size: 0.7em !important;
+                margin-top: 10px !important;
             }
 
             .main-content {
-                padding: 20px 0;
-                overflow-y: visible;
+                flex: 1 !important;
+                height: 297mm !important;
+                padding: 10mm 10mm 5mm 10mm !important;
+                box-sizing: border-box !important;
+                overflow: hidden !important;
             }
 
-            /* Exibe TODAS as seções na impressão de uma vez só */
             .page-section {
                 display: block !important;
                 opacity: 1 !important;
                 transform: none !important;
                 animation: none !important;
-                margin-bottom: 30px;
-                page-break-inside: avoid;
+                padding-bottom: 6px !important;
+                margin-bottom: 0 !important;
+                page-break-inside: avoid !important;
             }
 
             .page-section h2 {
-                color: #2c3e50;
-                font-size: 1.6em;
-                text-align: left;
-                border-bottom: 1px solid #ddd;
-                padding-bottom: 5px;
+                font-size: 0.95em !important;
+                margin-bottom: 4px !important;
+                margin-top: 2px !important;
+                text-align: left !important;
+                border-bottom: 1.5px solid #3498db !important;
+                padding-bottom: 1px !important;
             }
 
             .summary-card {
-                background-color: transparent;
-                border-left: 4px solid #2c3e50;
-                padding: 10px 15px;
-                box-shadow: none;
+                padding: 6px 8px !important;
+                font-size: 0.68em !important;
+                line-height: 1.25 !important;
+                border-left-width: 3px !important;
             }
 
             .card-list {
-                display: block; 
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 5px !important;
             }
 
             .card-list li {
-                background-color: transparent;
-                box-shadow: none;
-                padding: 10px 0;
-                border-bottom: 1px solid #eee;
-                break-inside: avoid; 
-            }
-
-            .card-list li:hover {
-                transform: none;
-                box-shadow: none;
+                padding: 5px 7px !important;
+                font-size: 0.65em !important;
+                border-radius: 5px !important;
+                page-break-inside: avoid !important;
             }
 
             .card-list li h3 {
-                color: #000;
+                font-size: 0.85em !important;
+                margin-bottom: 2px !important;
+            }
+
+            .card-list li .date {
+                font-size: 0.75em !important;
+                margin-bottom: 3px !important;
+            }
+
+            .card-list li p {
+                font-size: 0.88em !important;
+                margin: 1px 0 !important;
+                line-height: 1.15 !important;
+            }
+
+            .card-list li ul {
+                padding-left: 10px !important;
+                margin: 2px 0 !important;
+            }
+
+            .card-list li ul li {
+                margin-bottom: 1px !important;
+            }
+
+            .card-list li i.skill-icon {
+                font-size: 0.9em !important;
+                margin-right: 4px !important;
             }
         }
     </style>
@@ -371,17 +440,13 @@
 <body>
 
 <div class="curriculo-container">
-    
     <div class="sidebar">
-        
-        
-        <img src="https://i.ibb.co/JWdTCg2Z/me.jpg" alt="Foto de Perfil de Guilherme Azevedo" class="profile-pic">
+        <img src="profile.jpg" alt="Foto de Perfil de Guilherme Azevedo" class="profile-pic">
         <div class="profile-info">
             <h1>Guilherme Azevedo</h1>
             <p class="subtitle">Técnico de Informática<br>Suporte e Infraestrutura de TI</p>
         </div>
 
-        
         <div class="social-links">
             <a href="https://github.com/shayttz" target="_blank" title="GitHub">
                 <i class="fab fa-github"></i>
@@ -394,12 +459,15 @@
             </a>
         </div>
 
-        
         <div class="contact-email">
             <a href="mailto:guifraanco@gmail.com" title="Enviar E-mail">
                 <i class="fas fa-envelope"></i>
                 <span>guifraanco@gmail.com</span>
             </a>
+        </div>
+
+        <div class="print-link">
+            Clique para ver a versão interativa
         </div>
 
         <div class="sidebar-menu">
@@ -411,9 +479,7 @@
         </div>
     </div>
 
-    
     <div class="main-content">
-        
         <div id="summary" class="page-section active">
             <h2>Resumo Profissional</h2>
             <div class="summary-card">
@@ -421,7 +487,6 @@
             </div>
         </div>
 
-        
         <div id="skills" class="page-section">
             <h2>Competências Técnicas</h2>
             <ul class="card-list">
@@ -439,7 +504,7 @@
                 </li>
                 <li>
                     <h3><i class="fas fa-file-excel skill-icon"></i>Software & Produtividade</h3>
-                    <p>Instalação e parametrização de softwares corporativos. Pacote Microsoft Office / Microsoft 365 em nível avançado.</p>
+                    <p>Instalação e parametrização de softwares corporativos. Pacote Microsoft Office / Microsoft 365 (Word, Excel e PowerPoint, desktop e web) em nível avançado.</p>
                 </li>
                 <li>
                     <h3><i class="fas fa-headset skill-icon"></i>Atendimento & Suporte</h3>
@@ -452,7 +517,6 @@
             </ul>
         </div>
 
-        <!-- Seção: Experiência Profissional -->
         <div id="experience" class="page-section">
             <h2>Experiência Profissional</h2>
             <ul class="card-list">
@@ -506,13 +570,12 @@
             </ul>
         </div>
 
-        
         <div id="education" class="page-section">
             <h2>Formação Acadêmica</h2>
             <ul class="card-list">
                 <li>
                     <h3>Sistemas de Informação</h3>
-                    <p class="date">Universidade Estácio de Sá | 2018 – Concluído em 2024</p>
+                    <p class="date">Universidade Estácio de Sá | 2018 – 2024</p>
                     <p>Bacharelado concluído com foco em arquitetura de sistemas, desenvolvimento de software, redes de computadores e gestão de banco de dados.</p>
                 </li>
                 <li>
@@ -523,7 +586,6 @@
             </ul>
         </div>
 
-        
         <div id="languages" class="page-section">
             <h2>Idiomas</h2>
             <ul class="card-list">
@@ -570,7 +632,6 @@
                 showSection(targetId);
             });
         });
-        
         
         showSection('#summary');
     });
