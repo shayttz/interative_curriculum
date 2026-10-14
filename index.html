@@ -267,6 +267,105 @@
                 padding: 25px;
             }
         }
+        
+        @media print {
+            body {
+                background-color: #fff;
+                color: #000;
+                display: block;
+                min-height: auto;
+            }
+
+            .curriculo-container {
+                box-shadow: none;
+                width: 100%;
+                max-width: 100%;
+                border-radius: 0;
+                display: block; 
+            }
+
+            .sidebar {
+                width: 100%;
+                background-color: transparent;
+                color: #000;
+                padding: 0 0 20px 0;
+                border-bottom: 2px solid #2c3e50;
+                text-align: left;
+                align-items: flex-start;
+            }
+
+            .sidebar h1 {
+                color: #2c3e50;
+                font-size: 2em;
+            }
+
+            .sidebar p.subtitle {
+                color: #555;
+            }
+
+            .profile-pic, 
+            .sidebar-menu, 
+            .social-links {
+                display: none !important; 
+            }
+
+            
+            .contact-email a {
+                color: #000;
+                font-weight: bold;
+            }
+
+            .main-content {
+                padding: 20px 0;
+                overflow-y: visible;
+            }
+
+            /* Exibe TODAS as seções na impressão de uma vez só */
+            .page-section {
+                display: block !important;
+                opacity: 1 !important;
+                transform: none !important;
+                animation: none !important;
+                margin-bottom: 30px;
+                page-break-inside: avoid;
+            }
+
+            .page-section h2 {
+                color: #2c3e50;
+                font-size: 1.6em;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 5px;
+            }
+
+            .summary-card {
+                background-color: transparent;
+                border-left: 4px solid #2c3e50;
+                padding: 10px 15px;
+                box-shadow: none;
+            }
+
+            .card-list {
+                display: block; 
+            }
+
+            .card-list li {
+                background-color: transparent;
+                box-shadow: none;
+                padding: 10px 0;
+                border-bottom: 1px solid #eee;
+                break-inside: avoid; 
+            }
+
+            .card-list li:hover {
+                transform: none;
+                box-shadow: none;
+            }
+
+            .card-list li h3 {
+                color: #000;
+            }
+        }
     </style>
 </head>
 <body>
@@ -318,7 +417,7 @@
         <div id="summary" class="page-section active">
             <h2>Resumo Profissional</h2>
             <div class="summary-card">
-                Profissional de TI com formação em Sistemas de Informação e sólida experiência em suporte técnico, manutenção de hardware, instalação de softwares e atendimento a usuários — com atuação corporativa e autônoma. Possui domínio técnico em manutenção de computadores e notebooks, conhecimento intermediário em redes, suporte a ambientes Windows e Linux, além de nível avançado no pacote Microsoft Office / 365. Perfil highly organizado, ágil e preparado para atendimento presencial e remoto.
+                Profissional de TI com formação em Sistemas de Informação e sólida experiência em suporte técnico, manutenção de hardware, instalação de softwares e atendimento a usuários — com atuação corporativa e autônoma. Possui domínio técnico em manutenção de computadores e notebooks, conhecimento intermediário em redes, suporte a ambientes Windows e Linux, além de nível avançado no pacote Microsoft Office / 365. Perfil altamente organizado, ágil e preparado para atendimento presencial e remoto.
             </div>
         </div>
 
