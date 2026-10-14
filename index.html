@@ -60,17 +60,27 @@
 
         .sidebar p.subtitle {
             font-style: italic;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
             color: #bdc3c7;
             font-size: 0.95em;
             line-height: 1.4;
         }
 
+        .sidebar p.location {
+            color: #3498db;
+            font-size: 0.9em;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
         .social-links {
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
             margin-bottom: 15px;
+            width: 100%;
         }
 
         .social-links a {
@@ -84,22 +94,32 @@
         }
 
         .social-links a i {
-            font-size: 1.8em;
-            margin-bottom: 4px;
+            font-size: 1.6em;
+            margin-bottom: 3px;
+        }
+
+        .social-links a span.url-text {
+            font-size: 0.75em;
+            color: #bdc3c7;
+            word-break: break-all;
         }
 
         .social-links a:hover {
             color: #3498db;
         }
 
+        .social-links a:hover span.url-text {
+            color: #3498db;
+        }
+
         .contact-email {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .contact-email a {
             color: #ecf0f1;
             text-decoration: none;
-            font-size: 0.9em;
+            font-size: 0.88em;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -113,9 +133,10 @@
         .print-link {
             display: none;
             color: #3498db;
-            font-size: 0.85em;
-            margin-top: 15px;
+            font-size: 0.8em;
+            margin-top: 10px;
             text-decoration: underline;
+            word-break: break-all;
         }
 
         .sidebar-menu {
@@ -302,50 +323,60 @@
                 height: 297mm !important;
                 background-color: #2c3e50 !important;
                 color: #ecf0f1 !important;
-                padding: 15mm 4mm !important;
+                padding: 12mm 4mm !important;
                 box-sizing: border-box !important;
                 justify-content: flex-start !important;
             }
 
             .profile-pic {
-                width: 85px !important;
-                height: 85px !important;
-                margin-bottom: 8px !important;
+                width: 80px !important;
+                height: 80px !important;
+                margin-bottom: 6px !important;
                 border-width: 3px !important;
             }
 
             .sidebar h1 {
-                font-size: 1.3em !important;
-                margin: 4px 0 !important;
+                font-size: 1.25em !important;
+                margin: 2px 0 !important;
             }
 
             .sidebar p.subtitle {
-                font-size: 0.72em !important;
-                margin-bottom: 12px !important;
+                font-size: 0.7em !important;
+                margin-bottom: 2px !important;
                 line-height: 1.2 !important;
             }
 
+            .sidebar p.location {
+                font-size: 0.68em !important;
+                margin-bottom: 10px !important;
+            }
+
             .social-links {
-                gap: 10px !important;
+                gap: 8px !important;
                 margin-bottom: 8px !important;
             }
 
             .social-links a {
-                font-size: 0.68em !important;
+                font-size: 0.65em !important;
             }
 
             .social-links a i {
-                font-size: 1.1em !important;
-                margin-bottom: 2px !important;
+                font-size: 1em !important;
+                margin-bottom: 1px !important;
+            }
+
+            .social-links a span.url-text {
+                font-size: 0.6em !important;
+                color: #ecf0f1 !important;
             }
 
             .contact-email {
-                margin-bottom: 12px !important;
+                margin-bottom: 10px !important;
             }
 
             .contact-email a {
-                font-size: 0.68em !important;
-                gap: 4px !important;
+                font-size: 0.65em !important;
+                gap: 3px !important;
             }
 
             .sidebar-menu {
@@ -354,14 +385,14 @@
 
             .print-link {
                 display: block !important;
-                font-size: 0.7em !important;
-                margin-top: 10px !important;
+                font-size: 0.65em !important;
+                margin-top: 8px !important;
             }
 
             .main-content {
                 flex: 1 !important;
                 height: 297mm !important;
-                padding: 10mm 10mm 5mm 10mm !important;
+                padding: 8mm 8mm 4mm 8mm !important;
                 box-sizing: border-box !important;
                 overflow: hidden !important;
             }
@@ -371,14 +402,14 @@
                 opacity: 1 !important;
                 transform: none !important;
                 animation: none !important;
-                padding-bottom: 6px !important;
+                padding-bottom: 5px !important;
                 margin-bottom: 0 !important;
                 page-break-inside: avoid !important;
             }
 
             .page-section h2 {
-                font-size: 0.95em !important;
-                margin-bottom: 4px !important;
+                font-size: 0.9em !important;
+                margin-bottom: 3px !important;
                 margin-top: 2px !important;
                 text-align: left !important;
                 border-bottom: 1.5px solid #3498db !important;
@@ -386,39 +417,39 @@
             }
 
             .summary-card {
-                padding: 6px 8px !important;
-                font-size: 0.68em !important;
-                line-height: 1.25 !important;
+                padding: 5px 7px !important;
+                font-size: 0.65em !important;
+                line-height: 1.2 !important;
                 border-left-width: 3px !important;
             }
 
             .card-list {
                 display: grid !important;
                 grid-template-columns: 1fr 1fr !important;
-                gap: 5px !important;
+                gap: 4px !important;
             }
 
             .card-list li {
-                padding: 5px 7px !important;
-                font-size: 0.65em !important;
-                border-radius: 5px !important;
+                padding: 4px 6px !important;
+                font-size: 0.62em !important;
+                border-radius: 4px !important;
                 page-break-inside: avoid !important;
             }
 
             .card-list li h3 {
-                font-size: 0.85em !important;
+                font-size: 0.82em !important;
                 margin-bottom: 2px !important;
             }
 
             .card-list li .date {
-                font-size: 0.75em !important;
-                margin-bottom: 3px !important;
+                font-size: 0.72em !important;
+                margin-bottom: 2px !important;
             }
 
             .card-list li p {
-                font-size: 0.88em !important;
+                font-size: 0.85em !important;
                 margin: 1px 0 !important;
-                line-height: 1.15 !important;
+                line-height: 1.1 !important;
             }
 
             .card-list li ul {
@@ -431,8 +462,8 @@
             }
 
             .card-list li i.skill-icon {
-                font-size: 0.9em !important;
-                margin-right: 4px !important;
+                font-size: 0.85em !important;
+                margin-right: 3px !important;
             }
         }
     </style>
@@ -441,21 +472,24 @@
 
 <div class="curriculo-container">
     <div class="sidebar">
-        <img src="profile.jpg" alt="Foto de Perfil de Guilherme Azevedo" class="profile-pic">
+        <img src="https://i.ibb.co/JWdTCg2Z/me.jpg" alt="Foto de Perfil de Guilherme Azevedo" class="profile-pic">
         <div class="profile-info">
             <h1>Guilherme Azevedo</h1>
             <p class="subtitle">Técnico de Informática<br>Suporte e Infraestrutura de TI</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Volta Redonda - RJ</p>
         </div>
 
         <div class="social-links">
             <a href="https://github.com/shayttz" target="_blank" title="GitHub">
                 <i class="fab fa-github"></i>
                 <span>GitHub</span>
+                <span class="url-text">github.com/shayttz</span>
             </a>
             
             <a href="https://wa.me/5524981045004" target="_blank" title="WhatsApp">
                 <i class="fab fa-whatsapp"></i>
                 <span>WhatsApp</span>
+                <span class="url-text">(24) 98104-5004</span>
             </a>
         </div>
 
@@ -467,7 +501,10 @@
         </div>
 
         <div class="print-link">
-            Clique para ver a versão interativa
+            <a href="https://shayttz.github.io/interative_curriculum/" target="_blank" style="color: #3498db; text-decoration: underline;">
+                Clique para ver a versão interativa:<br>
+                shayttz.github.io/interative_curriculum/
+            </a>
         </div>
 
         <div class="sidebar-menu">
@@ -483,7 +520,7 @@
         <div id="summary" class="page-section active">
             <h2>Resumo Profissional</h2>
             <div class="summary-card">
-                Profissional de TI com formação em Sistemas de Informação e sólida experiência em suporte técnico, manutenção de hardware, instalação de softwares e atendimento a usuários — com atuação corporativa e autônoma. Possui domínio técnico em manutenção de computadores e notebooks, conhecimento intermediário em redes, suporte a ambientes Windows e Linux, além de nível avançado no pacote Microsoft Office / 365. Perfil altamente organizado, ágil e preparado para atendimento presencial e remoto.
+                Profissional de TI com formação em Sistemas de Informação e sólida experiência em suporte técnico, manutenção de hardware, instalação de softwares e atendimento a usuários — com atuação corporativa e autônoma. Possui domínio técnico em manutenção de computadores e notebooks, conhecimento intermediário em redes, suporte a ambientes Windows e Linux, além de nível avançado no pacote Microsoft Office / 365. Perfil altamente organized, ágil e preparado para atendimento presencial e remoto.
             </div>
         </div>
 
