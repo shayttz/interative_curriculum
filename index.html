@@ -22,7 +22,7 @@
             display: flex;
             width: 1200px;
             max-width: 90%;
-            min-height: 800px;
+            height: 850px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             border-radius: 15px;
             overflow: hidden;
@@ -37,9 +37,10 @@
             text-align: center;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; 
             align-items: center;
             box-sizing: border-box;
+            overflow-y: auto;
         }
 
         .profile-pic {
@@ -50,6 +51,7 @@
             object-fit: cover;
             object-position: center;
             margin-bottom: 20px;
+            flex-shrink: 0;
         }
 
         .sidebar h1 {
@@ -70,7 +72,7 @@
             color: #3498db;
             font-size: 0.88em;
             margin-top: 2px;
-            margin-bottom: 4px;
+            margin-bottom: 15px;
             font-weight: 500;
         }
 
@@ -80,7 +82,7 @@
             justify-content: center;
             align-items: flex-start;
             gap: 15px;
-            margin-top: 15px;
+            margin-top: 5px;
             margin-bottom: 15px;
             width: 100%;
         }
@@ -117,7 +119,7 @@
         }
 
         .contact-email {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         .contact-email a {
@@ -132,6 +134,18 @@
 
         .contact-email a:hover {
             color: #3498db;
+        }
+
+        
+        .cnh-tag {
+            color: #f1c40f;
+            font-size: 0.88em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
         .print-link {
@@ -152,7 +166,7 @@
         }
 
         .sidebar-menu {
-            margin-top: 15px;
+            margin-top: 10px;
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -283,6 +297,18 @@
             font-size: 1.2em;
         }
 
+        
+        .languages-list {
+            grid-template-columns: repeat(3, 1fr) !important;
+            text-align: center;
+        }
+
+        .languages-list li h3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         @media (max-width: 850px) {
             .curriculo-container {
                 flex-direction: column;
@@ -297,6 +323,10 @@
 
             .main-content {
                 padding: 25px;
+            }
+
+            .languages-list {
+                grid-template-columns: 1fr !important;
             }
         }
 
@@ -372,10 +402,18 @@
                 color: #3498db !important;
             }
 
+            .cnh-tag {
+                font-size: 0.62em !important;
+                color: #f1c40f !important;
+                margin-bottom: 4px !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
             .social-links {
                 gap: 4px !important;
-                margin-top: 8px !important;
-                margin-bottom: 6px !important;
+                margin-top: 6px !important;
+                margin-bottom: 4px !important;
             }
 
             .social-links a {
@@ -394,7 +432,7 @@
             }
 
             .contact-email {
-                margin-bottom: 6px !important;
+                margin-bottom: 4px !important;
             }
 
             .contact-email a {
@@ -506,6 +544,10 @@
                 margin-right: 3px !important;
                 color: #3498db !important;
             }
+
+            .languages-list {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
         }
     </style>
 </head>
@@ -518,7 +560,6 @@
             <h1>Guilherme Azevedo</h1>
             <p class="subtitle">Técnico de Informática<br>Suporte e Infraestrutura de TI</p>
             <p class="location"><i class="fas fa-map-marker-alt"></i> Volta Redonda - RJ</p>
-            <p class="location"><i class="fas fa-id-card"></i> CNH Categoria B</p>
         </div>
 
         <div class="social-links">
@@ -542,6 +583,8 @@
             </a>
         </div>
 
+        <p class="cnh-tag"><i class="fas fa-id-card"></i> CNH Categoria B</p>
+
         <div class="print-link">
             <a href="https://shayttz.github.io/interative_curriculum/" target="_blank" style="color: #3498db; text-decoration: none;">
                 Clique ou aponte a câmera para ver a versão interativa:
@@ -562,7 +605,7 @@
         <div id="summary" class="page-section active">
             <h2>Resumo Profissional</h2>
             <div class="summary-card">
-                Profissional de TI com formação em Sistemas de Informação e sólida experiência em suporte técnico, manutenção de hardware, instalação de softwares e atendimento a usuários — com atuação corporativa e autônoma. Possui domínio técnico em manutenção de computadores e notebooks, conhecimento intermediário em redes, suporte a ambientes Windows e Linux, além de nível avançado no pacote Microsoft Office / 365. Perfil altamente organized, ágil e preparado para atendimento presencial e remoto.
+                Profissional de TI com formação em Sistemas de Informação e sólida experiência em suporte técnico, manutenção de hardware, instalação de softwares e atendimento a usuários — com atuação corporativa e autônoma. Possui domínio técnico em manutenção de computadores e notebooks, conhecimento intermediário em redes, suporte a ambientes Windows e Linux, além de nível avançado no pacote Microsoft Office / 365. Perfil altamente organizado, ágil e preparado para atendimento presencial e remoto.
             </div>
         </div>
 
@@ -667,7 +710,7 @@
 
         <div id="languages" class="page-section">
             <h2>Idiomas</h2>
-            <ul class="card-list">
+            <ul class="card-list languages-list">
                 <li>
                     <h3><i class="fas fa-check-circle skill-icon"></i>Português</h3>
                     <p>Nativo</p>
